@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="top">
         <div class="header">
@@ -18,12 +24,14 @@
                 <a href="" class="about">about</a>
             </div>
         </div>
+        <div class="header-text-div-container">
+            <h1 class="header-text">
+                Find Awesome Places to Go
+            </h1>
+        </div>
 
-        <h1 class="header-text">
-            Find Awesome Places to Go
-        </h1>
     </div>
-    
+
     <div class="main">
         <div class="location-nav">
             <div class="location-nav-icon">
@@ -101,5 +109,35 @@
             <a href="" class="about">about</a>
         </div>
     </div>
+    <script>
+
+// Get references to the header element and the div you want to track
+const header = document.querySelector(".header");
+const targetDiv = document.querySelector(".top"); // Replace with your div's ID
+
+// Function to check if the div is in view
+function isInView(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Function to toggle the "scrolled" class on the header
+function handleScroll() {
+  const isDivInView = isInView(targetDiv);
+  if (!isDivInView) {
+    header.classList.add("scrolled"); // Add class when div is out of view
+  } else {
+    header.classList.remove("scrolled"); // Remove class when div is in view
+  }
+}
+
+// Attach the handleScroll function to window scroll event
+window.addEventListener("scroll", handleScroll);
+
+// Call the handleScroll function initially to set the state on page load
+handleScroll();
+console.log("hello")
+    </script>
 </body>
+
 </html>
