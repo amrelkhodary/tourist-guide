@@ -122,3 +122,53 @@ table {
     bottom: 2rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* main region styles */
+.main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* location nav region styles*/
+.main .location-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* location nav bar styles */
+.main .location-nav .location-nav-bar-container{
+    display: flex;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.4rem 1.5rem 0.4rem 0.9rem;
+    border-radius: 15px;
+}
+
+.main .location-nav .location-nav-bar-container .location-nav-icon{
+ padding-right: 1rem;
+}
+
+.main .location-nav .location-nav-bar-container .location-nav-icon img{
+    max-width: 24px;
+    height: auto;
+}
+
+.main .location-nav .location-nav-bar-container .location-nav-tabs{
+    display: flex;
+    gap:0.5rem;    
+}
+
+.main .location-nav .location-nav-bar-container .location-nav-tabs a{
+   color: white;
+   text-decoration: none;
+   transition: all 0.2s;
+}
+
+.main .location-nav .location-nav-bar-container .location-nav-tabs a:hover{
+  font-weight: bold;
+ }
