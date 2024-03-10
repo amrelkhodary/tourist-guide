@@ -221,3 +221,42 @@ table {
 .content .card .card-bottom p{
     padding-right: 1rem;
 }
+
+/* page nav styles*/
+.main .page-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* location nav bar styles */
+.main .page-nav .page-nav-bar-container{
+    display: flex;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.4rem 1.5rem 0.4rem 0.9rem;
+    border-radius: 15px;
+}
+
+.main .page-nav .page-nav-bar-container .page-nav-icon{
+ padding-right: 1rem;
+}
+
+
+.main .page-nav .page-nav-bar-container .page-nav-tabs{
+    display: flex;
+    gap:0.5rem;    
+}
+
+.main .page-nav .page-nav-bar-container .page-nav-tabs a{
+   color: white;
+   text-decoration: none;
+   transition: all 0.2s;
+}
+
+.main .page-nav .page-nav-bar-container .page-nav-tabs a:hover{
+  font-weight: bold;
+ }
